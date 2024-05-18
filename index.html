@@ -1,0 +1,188 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Sachram Singh - Portfolio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        /* Add CSS for hiding skills list by default */
+        .skills-list {
+            display: none;
+        }
+        /* CSS for hiding project descriptions by default */
+        .project-description {
+            display: none;
+        }
+        /* Adjust layout for projects to display in a row */
+        .project {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        /* Reduce gap from top of the page to the top of the website */
+        
+    </style>
+</head>
+<body class="is-preload">
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Header -->
+    <header id="header"></header>
+
+    <!-- Nav -->
+    <nav id="nav">
+        <ul class="links">
+            <li class="active"><a href="javascript:location.reload(true);">Portfolio</a></li>
+        </ul>
+        <ul class="icons">
+            <li><a href="https://www.linkedin.com/in/sachram-singh-0419a728a" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+            <li><a href="https://github.com/Minibunny14" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+        </ul>
+    </nav>
+
+    <!-- Main -->
+    <div id="main">
+
+        <!-- Post -->
+        <section class="post">
+            <header class="major">
+                <h1>Sachram Singh<br />
+                    Portfolio</h1>
+            </header>
+            <!-- Text stuff -->
+            <h2>About Me</h2>
+            <p>I am Sachram Singh, currently in my second year at Victoria University of Wellington, where I am passionately pursuing a BE(Hons) in Software Engineering, specialising in Embedded Systems.</p>
+            <p>Outside of academia, I actively engage in extracurricular activities such as Music, where I am able to play the Piano, Violin, Dilruba etc. In addition to this, I enjoy playing sports like badminton and football, and going to the gym regularly.</p>
+            <p>This Portfolio showcases some of the projects that I have taken part in.</p>
+            <hr />
+            <h2>Curriculum Vitae</h2>
+            <button onclick="viewCV()">VIEW MY CV</button> <!-- Added the button here -->
+            <p></p>
+            <!-- Portfolio -->
+            <h2>Portfolio</h2>
+            <div class="row">
+                <div class="col-4 col-12-small">
+                    <div class="project">
+                        <h3>Project 1</h3>
+                        <p>Laser based detection system.</p>
+                        <button class="toggle-description" data-target="project-1">View Project</button>
+                        <div class="project-description" id="project-1">
+                            <p>The purpose of this project was to design, build and program an obstruction detection system, which would detect obstructions in a conveyor belt system. </p>
+                            <p>Contact me for more information.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 col-12-small">
+                    <div class="project">
+                        <h3>Project 2</h3>
+                        <p>Autonomous Vehicle Challenge</p>
+                        <button class="toggle-description" data-target="project-2">View Project</button>
+                        <div class="project-description" id="project-2">
+                            <p>This team project was done as part of a BE(Hons) course. My role was to build and design an algorithm for the robot, that is what decision the robot makes depending on its surroundings.</p>
+                            <p>Contact me for more information.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 col-12-small">
+                    <div class="project">
+                        <h3>Project 3</h3>
+                        <p>Stepper motor driver</p>
+                        <button class="toggle-description" data-target="project-3">View Project</button>
+                        <div class="project-description" id="project-3">
+                            <p>This individual project was also done as part of a BE(Hons) course. The purpose of this project was to design a stepper motor driver for a mechanical cutting tool.</p>
+                            <p>This involved:</p>
+                            <ul>
+                                <li>The design of a finite state machine</li>
+                                <li>Systematic construction and testing of a complex digital logic circuit.</li>
+                                <li>Being comfortable with the use of ICs</li>
+                            </ul>
+                            <p>Contact me for more information.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr />
+
+            <!-- View Skills button and dropdown -->
+            <h2>Programming Languages</h2>
+            <ul>
+                <li>Java</li>
+                <li>C/C++</li>
+                <li>Terminal</li>
+                <li>Assembly</li>
+                <li>Python</li>
+                <li>Javascript</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <!-- Add more skills as needed -->
+            </ul>
+
+            <hr />
+
+            <!-- Contact -->
+            <h2>Contact Me</h2>
+            <!-- Your contact form code here -->
+
+            <hr />
+
+            <!-- Footer -->
+            <footer id="footer">
+                <section>
+                    <h3>Contact Information</h3>
+                    <p>
+                        Email: singhsach1@myvuw.ac.nz</p>
+                </section>
+                <section>
+                    <h3>Social</h3>
+                    <ul class="icons">
+                        <li><a href="https://www.linkedin.com/in/sachram-singh-0419a728a" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+                        <li><a href="https://github.com/Minibunny14" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                    </ul>
+                </section>
+            </footer>
+
+        </section>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        // JavaScript for toggling skills list
+        $(document).ready(function() {
+            $('.toggle-skills').click(function() {
+                $('.skills-list').slideToggle();
+            });
+
+            // JavaScript for toggling project descriptions
+            $('.toggle-description').click(function() {
+                var target = $(this).data('target');
+                $('#' + target).slideToggle();
+            });
+        });
+
+        function viewCV() {
+            window.open('images/My_Resume.pdf', '_blank');
+        }
+
+        function viewReport(report) {
+            window.open('images/' + report, '_blank');
+        }
+    </script>
+
+</div>
+
+</body>
+</html>
