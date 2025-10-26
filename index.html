@@ -1,197 +1,194 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <meta name="robots" content="index, follow" /> <!-- Ensures search engines can index the page -->
-    <meta name="author" content="Sachram Singh" />
-    <meta name="description" content="Portfolio of Sachram Singh, a Software Engineering student at Victoria University of Wellington specializing in Embedded Systems. Projects include laser detection systems, autonomous vehicle challenges, and stepper motor drivers." />
-    <meta name="keywords" content="Sachram Singh, Software Engineering, Embedded Systems, Portfolio, Laser Detection System, Autonomous Vehicle, Stepper Motor Driver, Victoria University of Wellington" />
-    <meta property="og:title" content="Sachram Singh - Portfolio" />
-    <meta property="og:description" content="Explore the portfolio of Sachram Singh, showcasing software engineering projects in embedded systems, including laser-based detection systems, autonomous vehicle challenges, and stepper motor drivers." />
-    <meta property="og:image" content="path-to-image.jpg" /> <!-- Add a relevant image URL -->
-    <meta property="og:url" content="your-website-url" /> <!-- Add your website's URL here -->
-    <meta name="google-site-verification" content="ORqjbZ4cy5ngPNQYDmV8TFgjPxkY5xriUVIchmbkK-k" />
-    <title>Sachram Singh - Portfolio</title>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sachram Singh – Embedded Software Engineer</title>
 
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  <!-- Google Fonts + Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <style>
-        /* Add CSS for hiding skills list by default */
-        .skills-list {
-            display: none;
-        }
-        /* CSS for hiding project descriptions by default */
-        .project-description {
-            display: none;
-        }
-        /* Adjust layout for projects to display in a row */
-        .project {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-    </style>
+  <link rel="stylesheet" href="css/styles.css"/>
 </head>
-<body class="is-preload">
+<body>
+  <!-- ===== BLACK-HOLE CURSOR CANVAS ===== -->
+  <canvas id="cursor-canvas"></canvas>
 
-<!-- Wrapper -->
-<div id="wrapper">
+  <!-- ===== ANIMATED CIRCUIT BACKGROUND ===== -->
+  <div id="circuit-bg"></div>
 
-    <!-- Header -->
-    <header id="header"></header>
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="logo">Sachram Singh</a>
 
-    <!-- Nav -->
-    <nav id="nav">
-        <ul class="links">
-            <li class="active"><a href="javascript:location.reload(true);">Portfolio</a></li>
-        </ul>
-        <ul class="icons">
-            <li><a href="https://www.linkedin.com/in/sachram-singh-0419a728a" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-            <li><a href="https://github.com/Minibunny14" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-        </ul>
-    </nav>
+      <!-- Social icons -->
+      <div class="social-icons">
+        <a href="https://github.com/Minibunny14" target="_blank" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/sachram-singh-0419a728a/" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
 
-    <!-- Main -->
-    <div id="main">
-
-        <!-- Post -->
-        <section class="post">
-            <header class="major">
-                <h1>Sachram Singh<br />
-                    Portfolio</h1>
-            </header>
-            <!-- Text stuff -->
-            <h2>About Me</h2>
-            <p>I am Sachram Singh, currently in my second year at Victoria University of Wellington, where I am passionately pursuing a BE(Hons) in Software Engineering, specialising in Embedded Systems.</p>
-            <p>Outside of academia, I actively engage in extracurricular activities such as Music, where I am able to play the Piano, Violin, Dilruba etc. In addition to this, I enjoy playing sports like badminton and football, and going to the gym regularly.</p>
-            <p>This Portfolio showcases some of the projects that I have taken part in.</p>
-            <hr />
-            <h2>Curriculum Vitae</h2>
-            <button onclick="viewCV()">VIEW MY CV</button> <!-- Added the button here -->
-            <p></p>
-            <!-- Portfolio -->
-            <h2>Portfolio</h2>
-            <div class="row">
-                <div class="col-4 col-12-small">
-                    <div class="project">
-                        <h3>Project 1</h3>
-                        <p>Laser based detection system.</p>
-                        <button class="toggle-description" data-target="project-1">View Project</button>
-                        <div class="project-description" id="project-1">
-                            <p>The purpose of this project was to design, build and program an obstruction detection system, which would detect obstructions in a conveyor belt system. </p>
-                            <p>Contact me for more information.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-4 col-12-small">
-                    <div class="project">
-                        <h3>Project 2</h3>
-                        <p>Autonomous Vehicle Challenge</p>
-                        <button class="toggle-description" data-target="project-2">View Project</button>
-                        <div class="project-description" id="project-2">
-                            <p>This team project was done as part of a BE(Hons) course. My role was to build and design an algorithm for the robot, that is what decision the robot makes depending on its surroundings.</p>
-                            <p>Contact me for more information.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-4 col-12-small">
-                    <div class="project">
-                        <h3>Project 3</h3>
-                        <p>Stepper motor driver</p>
-                        <button class="toggle-description" data-target="project-3">View Project</button>
-                        <div class="project-description" id="project-3">
-                            <p>This individual project was also done as part of a BE(Hons) course. The purpose of this project was to design a stepper motor driver for a mechanical cutting tool.</p>
-                            <p>This involved:</p>
-                            <ul>
-                                <li>The design of a finite state machine</li>
-                                <li>Systematic construction and testing of a complex digital logic circuit.</li>
-                                <li>Being comfortable with the use of ICs</li>
-                            </ul>
-                            <p>Contact me for more information.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <hr />
-
-            <!-- View Skills button and dropdown -->
-            <h2>Programming Languages</h2>
-            <ul>
-                <li>Java</li>
-                <li>C/C++</li>
-                <li>Terminal</li>
-                <li>Assembly</li>
-                <li>Python</li>
-                <li>Javascript</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <!-- Add more skills as needed -->
-            </ul>
-
-            <hr />
-
-            <!-- Contact -->
-            <h2>Contact Me</h2>
-            <!-- Your contact form code here -->
-
-            <hr />
-
-            <!-- Footer -->
-            <footer id="footer">
-                <section>
-                    <h3>Contact Information</h3>
-                    <p>
-                        Email: singhsach1@myvuw.ac.nz</p>
-                </section>
-                <section>
-                    <h3>Social</h3>
-                    <ul class="icons">
-                        <li><a href="https://www.linkedin.com/in/sachram-singh-0419a728a" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-                        <li><a href="https://github.com/Minibunny14" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-                    </ul>
-                </section>
-            </footer>
-
-        </section>
-
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </div>
+  </nav>
 
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script>
-        // JavaScript for toggling skills list
-        $(document).ready(function() {
-            $('.toggle-skills').click(function() {
-                $('.skills-list').slideToggle();
-            });
+  <!-- ===== HERO ===== -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1 class="glitch" data-text="Sachram Singh">Sachram Singh</h1>
+      <p>Embedded Software Engineer | IoT & Robotics Enthusiast</p>
+      <a href="#projects" class="btn">See My Work</a>
+    </div>
+  </section>
 
-            // JavaScript for toggling project descriptions
-            $('.toggle-description').click(function() {
-                var target = $(this).data('target');
-                $('#' + target).slideToggle();
-            });
-        });
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>
+        I'm a Software Engineering student specialising in Embedded Systems at Victoria University of Wellington.
+        I love turning hardware headaches into elegant code—whether it's laser sensors on industrial conveyors
+        or autonomous maze-navigating bots.
+      </p>
+    </div>
+  </section>
 
-        function viewCV() {
-            window.open('images/My_Resume.pdf', '_blank');
-        }
+  <!-- ===== EDUCATION ===== -->
+  <section id="education" class="section alt-bg">
+    <div class="container">
+      <h2>Education</h2>
+      <div class="card">
+        <h3>Bachelor of Engineering (Hons) – Software Engineering</h3>
+        <p>2023 – Present | Victoria University of Wellington, NZ</p>
+        <small>Specialising in Embedded Systems</small>
+      </div>
+    </div>
+  </section>
 
-        function viewReport(report) {
-            window.open('images/' + report, '_blank');
-        }
-    </script>
+  <!-- ===== EXPERIENCE ===== -->
+  <section id="experience" class="section">
+    <div class="container">
+      <h2>Experience</h2>
 
-</div>
+      <div class="card">
+        <h3>Part-time Quality Tester / Automation Engineer</h3>
+        <span>Balesses Kitchen Ltd | 2021 – Present</span>
+        <ul>
+          <li>Designed embedded laser obstruction-detection system in C; decreased equipment damage by 85%.</li>
+          <li>Maintained industrial conveyors & mixers.</li>
+        </ul>
+      </div>
 
+      <div class="card">
+        <h3>Tutor – Engineering Design</h3>
+        <span>Victoria University | Jul 2025 – Nov 2025</span>
+        <ul>
+          <li>Teaching sustainability, FSMs & AI concepts to first-years.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Tutor – Digital Electronics & Microcontrollers</h3>
+        <span>Victoria University | Feb 2025 – Jun 2025</span>
+        <ul>
+          <li>Helped second-years with circuits & microcontrollers.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="section alt-bg">
+    <div class="container">
+      <h2>Projects</h2>
+
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>Laser-Based Obstruction Detection</h3>
+          <p>Embedded C system saving bakery conveyors from damage.</p>
+          <a class="btn-small" href="https://github.com/Minibunny14/Laser-Based-Obstruction-Detection-System" target="_blank">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+        </div>
+
+        <div class="project-card">
+          <h3>Home Sentinel IoT Security</h3>
+          <p>ESP32 + cloud + SMS/call/email alerts.</p>
+          <a class="btn-small" href="https://github.com/Minibunny14/HomeSentinel" target="_blank">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+        </div>
+
+        <div class="project-card">
+          <h3>Autonomous Maze Vehicle</h3>
+          <p>C++ robot navigating with line-following & obstacle avoidance.</p>
+        </div>
+
+        <div class="project-card">
+          <h3>Smart Irrigation System</h3>
+          <p>Auto-controller using soil & weather data (Agro-Matic).</p>
+          <a class="btn-small" href="https://github.com/Minibunny14/Agro_Matic" target="_blank">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section id="skills" class="section">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h4>Languages</h4>
+          <p>C/C++, Python, Java, MicroPython, C#, JavaScript, Assembly</p>
+        </div>
+        <div class="skill-category">
+          <h4>Tools</h4>
+          <p>Git, Docker, AWS, GitHub Actions, GitLab CI/CD</p>
+        </div>
+        <div class="skill-category">
+          <h4>Embedded / Electronics</h4>
+          <p>ESP32, ARM, PCBs, Oscilloscopes, Sensors, IoT Protocols</p>
+        </div>
+        <div class="skill-category">
+          <h4>Design & Game Dev</h4>
+          <p>SolidWorks, Blender, Unity, Unreal Engine</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section alt-bg">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>
+        Email: <a href="mailto:singhsach1@myvuw.ac.nz">singhsach1@myvuw.ac.nz</a><br>
+        LinkedIn: <a href="https://www.linkedin.com/in/sachram-singh-0419a728a/" target="_blank">sachram-singh-0419a728a</a><br>
+        Phone: +64 27 722 4726
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>© <span id="year"></span> Sachram Singh. Built with ⚡ & solder.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
