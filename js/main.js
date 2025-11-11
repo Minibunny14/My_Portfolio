@@ -1,6 +1,14 @@
 /* ---------- dynamic year ---------- */
 document.getElementById('year').textContent = new Date().getFullYear();
 
+/* fade-in setup */
+document.body.classList.add('fade-out');
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    document.body.classList.replace('fade-out', 'fade-in');
+  }, 500); // small delay to ensure transition syncs
+});
+
 /* ---------- nav-link active highlight ---------- */
 window.addEventListener('scroll', () => {
   let current = '';
@@ -96,3 +104,42 @@ window.addEventListener('mousemove', e => {
   mouse.x = e.clientX;
   mouse.y = e.clientY;
 });
+
+/* ===== FIRMWARE BOOT-UP TYPER ===== */
+const bootLog   = document.getElementById('boot-log');
+const bootScreen= document.getElementById('bootloader');
+const lines = [
+  '>> Boot sequence start...',
+  '>> Loading profile: Sachram Singh',
+  '>> Fetching projects... OK',
+  '>> Connecting to AWS instance... connected',
+  '>> Deploying UI components... done',
+  '>> Initializing creativity engine... active',
+  '>> System ready. Entering portfolio mode.',
+  '>> Welcome - let’s build something awesome.'
+];
+
+let lineIdx = 0;
+let charIdx = 0;
+const typeDelay = 45;      // ms per character
+
+function typeLine(){
+  if (lineIdx >= lines.length){
+    setTimeout(() => {
+      bootScreen.style.opacity = 0;
+      document.body.classList.replace('fade-out', 'fade-in');
+    }, 400);
+    setTimeout(() => bootScreen.remove(), 1000);
+    return;
+  }
+  const cur = lines[lineIdx];
+  if (charIdx < cur.length){
+    bootLog.textContent += cur[charIdx++];
+    setTimeout(typeLine, typeDelay);
+  } else {
+    bootLog.textContent += '\n';
+    lineIdx++; charIdx = 0;
+    setTimeout(typeLine, 300);
+  }
+}
+typeLine();

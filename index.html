@@ -55,6 +55,11 @@
   </script>
 </head>
 <body>
+  <!-- ===== BOOT LOADER ===== -->
+<section id="bootloader" class="bootloader">
+  <pre id="boot-log"></pre>
+  <span class="boot-cursor">_</span>
+</section>
   <!-- ===== BLACK-HOLE CURSOR CANVAS ===== -->
   <canvas id="cursor-canvas"></canvas>
 
@@ -92,7 +97,10 @@
     <div class="hero-content">
       <h1 class="glitch" data-text="Sachram Singh">Sachram Singh</h1>
       <p>Embedded Software Engineer | IoT & Robotics Enthusiast</p>
-      <a href="#projects" class="btn">See My Work</a>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn">See My Work</a>
+        <a href="#experience" class="btn">See My Experience</a>
+      </div>
     </div>
   </section>
 
@@ -136,6 +144,14 @@
       <div class="card">
         <h3>Electrical/Electronic Engineer Intern</h3>
         <span>AoFrio | Nov 2025 – Present</span>
+        <ul>
+          <p></p>
+        </ul>
+      </div>
+      
+      <div class="card">
+        <h3>Research Assistant – Weather-Station Firmware</h3>
+        <span>Victoria University of Wellington | Nov 2025 – Feb 2025</span>
         <ul>
           <p></p>
         </ul>
@@ -223,16 +239,25 @@
   </section>
 
   <!-- ===== CONTACT ===== -->
-  <section id="contact" class="section alt-bg">
-    <div class="container">
-      <h2>Contact</h2>
-      <p>
-        Email: <a href="mailto:singhsach1@myvuw.ac.nz">singhsach1@myvuw.ac.nz</a><br>
-        LinkedIn: <a href="https://www.linkedin.com/in/sachram-singh-0419a728a/" target="_blank">sachram-singh-0419a728a</a><br>
-        Phone: +64 27 722 4726
-      </p>
+<section id="contact" class="section alt-bg">
+  <div class="container contact-container">
+    <h2>Contact</h2>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <i class="fas fa-envelope"></i>
+        <a href="mailto:singhsach1@myvuw.ac.nz">singhsach1@myvuw.ac.nz</a>
+      </div>
+      <div class="contact-card">
+        <i class="fab fa-linkedin"></i>
+        <a href="https://www.linkedin.com/in/sachram-singh-0419a728a/" target="_blank">LinkedIn Profile</a>
+      </div>
+      <div class="contact-card">
+        <i class="fas fa-phone"></i>
+        <span>+64 27 722 4726</span>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- ===== FOOTER ===== -->
   <footer>
